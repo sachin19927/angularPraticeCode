@@ -1,0 +1,46 @@
+Custom port run
+ng serve --port=51341
+
+build application npm run "****"  which is pacakge.json
+
+Make a one component later split that into sub component
+
+Make it generic reusable component
+
+proprty Binding ex ngStyle(inbuilt) custom property binding @Input()
+
+directive NgFor 
+
+direcrtive can be used with HTML and Custom selectors 
+
+
+Declaration
+ @Input('dataList') meter!:{name:string,city:string,type:string};
+ 
+ 
+Intialization 
+meterDetailLt=[{"name":"Bindisha","city":"RAJ" , "type":"LT"},
+                {"name":"China","city":"RAJ" , "type":"LT"}] 
+	
+
+
+Task 1
+
+Use Boot strap	Table 	/Anything
+
+{name:string,mtr_status:boolean,mtr_type:string,installedDate:date,city:string,state:string,phoneNo:number,pincode:number};	
+
+mtr_status
+Active/Inactive Green/Red
+
+mtr_type
+Badge 
+
+Name In capital use Pipes
+
+Date format i want in DD-MM-YYYY  pipes date pipes
+
+			
+Task 2
+
+Applying Filter pipe to the above UI			
