@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DatepipePipe } from 'src/app/shared/datepipe.pipe';
 
 @Component({
   selector: 'app-server-list',
