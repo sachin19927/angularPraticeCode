@@ -1,4 +1,10 @@
-<h2>Server List LT</h2>
+<!-- <h2>Server List LT</h2>
 <app-server-list *ngFor="let serverList of meterDetailLt" [dataList]="serverList"></app-server-list>
 <h2>Server List HT</h2>
-<app-server-list *ngFor="let serverList of meterDetailHt" [dataList]="serverList"></app-server-list>
+<app-server-list *ngFor="let serverList of meterDetailHt" [dataList]="serverList"></app-server-list> -->
+
+
+<h2>Server List LT</h2>
+<app-server-list *ngFor="let metersList of meterDetailLt" [mtrList]="metersList"></app-server-list>
+<h2>Server List HT</h2>
+<app-server-list *ngFor="let metersList of meterDetailHt" [mtrList]="metersList"></app-server-list>
