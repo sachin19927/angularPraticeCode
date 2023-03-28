@@ -1,8 +1,70 @@
-
+<!-- 
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-body" [ngStyle]="meter.type==='LT'?{color:'blue'}:{color:'red'}">{{meter.name}}--{{meter.type}}</div>
     <span>{{meter.city}}</span>
   </div>
-</div>
+</div> -->
+
+
+
+<table class="table align-middle mb-0 bg-white">
+  <thead class="bg-light">
+    <tr>
+      <th>Name</th>
+      <th>Meter Status</th>
+      <th>Meter Type</th>
+      <th>Installed Date</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Phone No.</th>
+      <th>Pincode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <!-- <img
+              src="https://mdbootstrap.com/img/new/avatars/10.jpg"
+              alt=""
+              style="width: 45px; height: 45px"
+              class="rounded-circle"
+              /> -->
+          <div class="ms-3">
+            <p class="fw-bold mb-1">{{meterDetail.name | uppercase}}</p>
+            <!-- <p class="text-muted mb-0">john.doe@gmail.com</p> -->
+          </div>
+        </div>
+      </td>
+
+      <td>
+        <p class="fw-normal mb-1" [ngStyle]="meterDetail.mtr_status ===true?{color:'blue'}:{color:'red'}">{{meterDetail.mtr_status}}</p>
+        <!-- <p class="text-muted mb-0">IT department</p> -->
+      </td>
+      <td *ngIf="meterDetail.mtr_type==='LT'; else elseBlock">
+        <span class="badge badge-success rounded-pill d-inline" >{{meterDetail.mtr_type}}</span>
+      </td>
+      <ng-template #elseBlock><span class="badge bg-danger rounded-pill d-inline" >{{meterDetail.mtr_type}}</span></ng-template>
+      
+      
+      <td>
+        <p class="fw-normal mb-1">{{meterDetail.installedDate | date:'dd-MM-yyyy' }}</p>
+        <!-- <p class="text-muted mb-0">IT department</p> -->
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{meterDetail.city }}</p>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{meterDetail.state }}</p>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{meterDetail.phoneNo }}</p>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{meterDetail.pincode }}</p>
+      </td>
+    </tr>
+      </tbody>
+</table>
 
