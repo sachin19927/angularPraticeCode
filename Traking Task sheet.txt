@@ -9,38 +9,49 @@ Make it generic reusable component
 
 proprty Binding ex ngStyle(inbuilt) custom property binding @Input()
 
-directive NgFor 
+directive NgFor
 
-direcrtive can be used with HTML and Custom selectors 
+direcrtive can be used with HTML and Custom selectors
 
 
 Declaration
  @Input('dataList') meter!:{name:string,city:string,type:string};
- 
- 
-Intialization 
+
+
+Intialization
 meterDetailLt=[{"name":"Bindisha","city":"RAJ" , "type":"LT"},
-                {"name":"China","city":"RAJ" , "type":"LT"}] 
-	
+                {"name":"China","city":"RAJ" , "type":"LT"}]
+
 
 
 Task 1
 
 Use Boot strap	Table 	/Anything
 
-{name:string,mtr_status:boolean,mtr_type:string,installedDate:date,city:string,state:string,phoneNo:number,pincode:number};	
+{name:string,mtr_status:boolean,mtr_type:string,installedDate:date,city:string,state:string,phoneNo:number,pincode:number};
 
 mtr_status
 Active/Inactive Green/Red
 
 mtr_type
-Badge 
+Badge
 
 Name In capital use Pipes
 
 Date format i want in DD-MM-YYYY  pipes date pipes
 
-			
+
 Task 2
 
-Applying Filter pipe to the above UI			
+Applying Filter pipe to the above UI
+
+
+directive
+
+SAC
+Structure
+Attribute   --- Task is to creat custom driectve onclick ope drop down
+component
+
+
+Envirment config fr test and cert
