@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerListComponent } from './component/server-list/server-list.component';
 import { HightlightdirectvieDirective } from './shared/hightlightdirectvie.directive';
+import { StrcaseDirective } from './shared/strcase.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerListComponent,
-    HightlightdirectvieDirective
+    HightlightdirectvieDirective,
+    StrcaseDirective
   ],
   imports: [
     BrowserModule,

@@ -55,3 +55,30 @@ component
 
 
 Envirment config fr test and cert
+
+
+Task 2
+
+Create Table Componet
+
+TS []
+
+Bootstrap Table
+
+Custom on mouseover chagnes on Tbody Attribute directive
+Click then drop down should open on up
+
+ngIf revers Structure directive
+
+ngswitch
+
+
+Environment  - Header Name should changes
+
+
+
+
+
+
+
+

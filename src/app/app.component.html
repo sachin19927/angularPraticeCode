@@ -61,3 +61,22 @@ Environment - {{env}}
     </tr>
   </tbody>
 </table>
+
+
+<button (click)="odd=!odd">Get Alternate</button>
+
+<div *appStrcase="odd">
+<div  [ngStyle]="{'color': OddNumber%2!==0?'red':'blue'}" *ngFor="let OddNumber of oddNumbers" >
+  <p >{{OddNumber}}</p>
+</div>
+</div>
+
+<div *appStrcase="!odd">
+  <div  [ngStyle]="{'color': evenNumber%2!==0?'red':'blue'}" *ngFor="let evenNumber of evenNumbers" >
+    <p >{{evenNumber}}</p>
+  </div>
+  </div>
+
+
+
+

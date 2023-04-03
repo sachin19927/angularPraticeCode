@@ -12,7 +12,10 @@ export class AppComponent {
   myDate = Date;
   env = environment.title;
 
+  oddNumbers =[1,3,5,7,9]
+  evenNumbers =[2,4,6,8,10]
 
+  odd=false;
 
   // meterDetailLt=[{"name":"Bindisha","city":"RAJ" , "type":"LT"},
   //               {"name":"China","city":"RAJ" , "type":"LT"}]
