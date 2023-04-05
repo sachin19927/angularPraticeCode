@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ServerListComponent } from './component/server-list/server-list.component';
 import { HightlightdirectvieDirective } from './shared/hightlightdirectvie.directive';
 import { StrcaseDirective } from './shared/strcase.directive';
+import { TableComponent } from './component/table/table.component';
+import { AttributeHighlightDirective } from './shared/attribute-highlight.directive';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { StrcaseDirective } from './shared/strcase.directive';
     AppComponent,
     ServerListComponent,
     HightlightdirectvieDirective,
-    StrcaseDirective
+    StrcaseDirective,
+    TableComponent,
+    AttributeHighlightDirective
   ],
   imports: [
     BrowserModule,
