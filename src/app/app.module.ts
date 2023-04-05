@@ -10,6 +10,7 @@ import { TableComponent } from './component/table/table.component';
 import { AttributeHighlightDirective } from './shared/attribute-highlight.directive';
 import { MeterComponent } from './component/meter/meter.component';
 import { FormsModule } from '@angular/forms';
+import { FormDemoComponent } from './component/form-demo/form-demo.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     StrcaseDirective,
     TableComponent,
     AttributeHighlightDirective,
-    MeterComponent
+    MeterComponent,
+    FormDemoComponent
   ],
   imports: [
     BrowserModule,

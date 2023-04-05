@@ -59,18 +59,19 @@ Envirment config fr test and cert
 
 Task 2
 
+2 components to create -
 Create Table Componet
 
-TS []
+TS [] - no hardcode , dummy array , put in table
 
 Bootstrap Table
 
 Custom on mouseover chagnes on Tbody Attribute directive
-Click then drop down should open on up
+Click then drop down should open on up - using directive
 
-ngIf revers Structure directive
+ngIf revers Structure directive - write own  structure directive
 
-ngswitch
+ngswitch - check
 
 
 Environment  - Header Name should changes
