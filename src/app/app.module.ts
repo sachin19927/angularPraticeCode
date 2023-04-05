@@ -8,6 +8,8 @@ import { HightlightdirectvieDirective } from './shared/hightlightdirectvie.direc
 import { StrcaseDirective } from './shared/strcase.directive';
 import { TableComponent } from './component/table/table.component';
 import { AttributeHighlightDirective } from './shared/attribute-highlight.directive';
+import { MeterComponent } from './component/meter/meter.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { AttributeHighlightDirective } from './shared/attribute-highlight.direct
     HightlightdirectvieDirective,
     StrcaseDirective,
     TableComponent,
-    AttributeHighlightDirective
+    AttributeHighlightDirective,
+    MeterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

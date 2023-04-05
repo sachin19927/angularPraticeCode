@@ -1,16 +1,14 @@
 Environment - {{env}}
 
-<!-- <h2>Server List LT</h2>
-<app-server-list *ngFor="let serverList of meterDetailLt" [dataList]="serverList"></app-server-list>
-<h2>Server List HT</h2>
-<app-server-list *ngFor="let serverList of meterDetailHt" [dataList]="serverList"></app-server-list> -->
-
-
-<!-- <h2>Server List LT</h2>
+<!-- <app-meter></app-meter> -->
+<button (click)="onclick()">Add LT</button>
+<h2>Server List LT</h2>
 <app-server-list *ngFor="let metersList of meterDetailLt" [mtrList]="metersList"></app-server-list>
-<h2>Server List HT</h2>
+<!-- <h2>Server List HT</h2>
 <app-server-list *ngFor="let metersList of meterDetailHt" [mtrList]="metersList"></app-server-list> -->
 
+
+<hr>
 
 <!--<hr>
 <table  class="table">
@@ -76,17 +74,17 @@ Environment - {{env}}
     <p >{{evenNumber}}</p>
   </div>
   </div> -->
- 
 
 
+<!--
   <div>
     <app-table *ngFor="let detail of personalDetail" [biodata]="detail"></app-table>
-  </div>
+  </div> -->
   <!-- <button (click)="getDetail()">SEND</button> -->
 
 
-  
-  <hr>
+
+  <!-- <hr>
   <h4>NgIf</h4>
   <div *ngFor="let meter of meterDetailLt" [ngStyle]="{'color':meter.mtr_type==='LT'?'green':'red'}">
     <p>{{meter.name}}  {{meter.mtr_type}}</p>
@@ -94,9 +92,9 @@ Environment - {{env}}
 
   <hr>
   <h4>NgSwitch</h4>
-  <ul *ngFor="let person of personalDetail" [ngSwitch]="person.name"> 
+  <ul *ngFor="let person of personalDetail" [ngSwitch]="person.name">
 
-  <li *ngSwitchCase="'A'" 
+  <li *ngSwitchCase="'A'"
       class="text-success">{{ person.name }} ({{ person.city }})
   </li>
   <li *ngSwitchCase="'B'"
@@ -105,7 +103,7 @@ Environment - {{env}}
   <li *ngSwitchCase="'C'"
       class="text-danger">{{ person.name }} ({{ person.city }})
   </li>
- 
-</ul>
+
+</ul> -->
 
 

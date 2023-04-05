@@ -1,0 +1,38 @@
+<section class="sample-app-content">
+  <h1>Template-driven Form Example (with bi-directional data binding):</h1>
+
+      <p>
+          <label>First Name:</label>
+          <input type="text"
+              [(ngModel)]="user.name" required>
+      </p>
+      <p>
+          <label>Mtr Type:</label>
+          <input type="test"
+              [(ngModel)]="user.mtr_type" required>
+      </p>
+      <p>
+          <label>city:</label>
+          <input type="test"
+              [(ngModel)]="user.city" required>
+      </p>
+      <p>
+          <label>State:</label>
+          <input type="test"
+              [(ngModel)]="user.state" required>
+      </p>
+      <p>
+          <label>phoneNo:</label>
+          <input type="test"
+              [(ngModel)]="user.phoneNo" required>
+      </p>
+      <p>
+          <label>Pincode:</label>
+          <input type="test"
+              [(ngModel)]="user.pincode" required>
+      </p>
+      <p>
+          <button type="submit" (click)="onSubmit()">Submit</button>
+      </p>
+
+</section>

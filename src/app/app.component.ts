@@ -36,11 +36,16 @@ export class AppComponent {
     {"name":"A", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532},
     {"name":"B", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532},
     {"name":"C", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532}
- 
+
   ]
 
   getDetail(){
     alert("INSIDE");
   }
+
+onclick(){
+  this.meterDetailLt.push({"name":"METER1", "mtr_status":true ,"mtr_type":"LT","installedDate":new Date(),"city":"Mumbai",
+  "state":"Maharashtra", "phoneNo":9632189577, "pincode":400078})
+}
 
 }
