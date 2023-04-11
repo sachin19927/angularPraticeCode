@@ -48,4 +48,11 @@ onclick(){
   "state":"Maharashtra", "phoneNo":9632189577, "pincode":400078})
 }
 
+
+onSubmitParentFromChild(data:any)
+  {
+    alert('App Comp');
+    console.log(data)
+  }
+
 }

@@ -9,7 +9,7 @@ import { StrcaseDirective } from './shared/strcase.directive';
 import { TableComponent } from './component/table/table.component';
 import { AttributeHighlightDirective } from './shared/attribute-highlight.directive';
 import { MeterComponent } from './component/meter/meter.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormDemoComponent } from './component/form-demo/form-demo.component';
 
 
@@ -27,7 +27,8 @@ import { FormDemoComponent } from './component/form-demo/form-demo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
