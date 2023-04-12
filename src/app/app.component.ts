@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   title = 'demoAngular';
   env = environment.title;
+  userDetail:any=[]
 
   oddNumbers =[1,3,5,7,9]
   evenNumbers =[2,4,6,8,10]
@@ -23,7 +24,9 @@ export class AppComponent {
 
   meterDetailHt = [{"name":"METER2", "mtr_status":false ,"mtr_type":"HT","installedDate":new Date(),"city":"Mumbai",
                   "state":"Maharashtra", "phoneNo":9632189577, "pincode":400078}]
-
+  
+                  
+   
 
                   getColor(){
                     if(this.env==='DEV')
@@ -51,8 +54,8 @@ onclick(){
 
 onSubmitParentFromChild(data:any)
   {
-    alert('App Comp');
-    console.log(data)
+    console.log(data);
+    this.userDetail.push(data);
   }
 
 }

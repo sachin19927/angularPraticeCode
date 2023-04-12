@@ -5,8 +5,23 @@
         <input type="text" class="form-control"  formControlName="name" placeholder="Enter Name"  required>
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Mtr Type</label>
-        <input type="text" class="form-control" formControlName="mtr_type" placeholder="Enter Mtr type"  required>
+        <label for="inputPassword4">Installed Date</label>
+        <input type="date" class="form-control" formControlName="installedDate" placeholder="Enter Installed Date"  required>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Meter Status</label>
+        <br>
+        <input type="radio" value="active" formControlName="mtr_status"> Active
+        <input type="radio" value="inactive" formControlName="mtr_status"> Inactive
+      </div>
+     
+      <div class="form-group col-md-2">
+        <label for="inputMeterType">Meter Type</label>
+          <select id="inputMeterType" class="form-control" formControlName="mtr_type" placeholder="Enter Mtr type" required>
+          <option selected>Choose...</option>
+          <option>LT</option>
+          <option>HT</option>
+        </select>
       </div>
     </div>
     <div class="form-row">
@@ -18,22 +33,25 @@
         <label for="inputState">State</label>
         <select id="inputState" class="form-control" formControlName="state"  required>
           <option selected>Choose...</option>
-          <option>Udaipur</option>
-          <option>Mumbai</option>
-          <option>Bangalore</option>
-          <option>Delhi</option>
+          <option>Rajasthan</option>
+          <option>Maharashtra</option>
+          <option>Karnataka</option>
+          <option>Tamil Nadu</option>
         </select>
       </div>
       <div class="form-group col-md-2">
         <label for="inputZip">Phone No</label>
-        <input type="text" class="form-control" formControlName="phoneNo" placeholder="Enter City"  required>
+        <input type="number" class="form-control" formControlName="phoneNo" placeholder="Enter Phone No."  required>
       </div>
       <div class="form-group col-md-2">
         <label for="inputZip">Pin Code</label>
-        <input type="text" class="form-control" formControlName="pinCode" placeholder="Enter City"  required>
+        <input type="number" class="form-control" formControlName="pincode" placeholder="Enter Pincode"  required>
       </div>
 
     </div>
-
-    <button (click)="onSubmit()" class="btn btn-primary">Sign in</button>
+    <div class="form-row">
+    <div class="form-group col-md-2">
+    <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
   </form>

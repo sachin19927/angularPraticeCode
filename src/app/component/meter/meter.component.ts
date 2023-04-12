@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-meter',
@@ -7,19 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeterComponent implements OnInit {
 
+  @Input('usrDetail') userDetail!:[{name:string,mtr_status:string,mtr_type:string,installedDate:Date,city:string,state:string,phoneNo:number,pincode:number}];
+
   constructor() { }
 
   ngOnInit(): void {
   }
   user!: MeterUser;
-
-  onSubmit(){
-    alert(this.user)
-
-  }
-
-
-
 
 }
 

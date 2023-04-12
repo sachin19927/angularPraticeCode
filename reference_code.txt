@@ -1,0 +1,178 @@
+Environment - {{env}}
+
+<!-- <app-meter></app-meter> -->
+<!-- <button (click)="onclick()">Add LT</button>
+<h2>Server List LT</h2>
+<app-server-list *ngFor="let metersList of meterDetailLt" [mtrList]="metersList"></app-server-list> -->
+<!-- <h2>Server List HT</h2>
+<app-server-list *ngFor="let metersList of meterDetailHt" [mtrList]="metersList"></app-server-list> -->
+
+
+<hr>
+<h4>Meter Detail</h4>
+<app-form-demo  (onSubmitChild)="onSubmitParentFromChild($event)"></app-form-demo>
+
+<!-- <app-meter *ngFor="let userDetailAll of userDetail" [usrDetail]="userDetailAll"></app-meter> -->
+
+<app-meter [usrDetail]="userDetail"></app-meter>
+
+
+<!--<hr>
+<table  class="table">
+  <thead appHightlightdirectvie [defaultColor]="'yellow'" [highLight]="'grey'">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr >
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td><div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td><div class="dropdown">
+        <button class=" btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton" data-toggle="dropdown">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+ <button (click)="odd=!odd">Get Alternate</button>
+
+<div *appStrcase="odd">
+<div  [ngStyle]="{'color': OddNumber%2!==0?'red':'blue'}" *ngFor="let OddNumber of oddNumbers" >
+  <p >{{OddNumber}}</p>
+</div>
+</div>
+
+<div *appStrcase="!odd">
+  <div  [ngStyle]="{'color': evenNumber%2!==0?'red':'blue'}" *ngFor="let evenNumber of evenNumbers" >
+    <p >{{evenNumber}}</p>
+  </div>
+  </div> -->
+
+
+<!--
+  <div>
+    <app-table *ngFor="let detail of personalDetail" [biodata]="detail"></app-table>
+  </div> -->
+  <!-- <button (click)="getDetail()">SEND</button> -->
+
+
+
+  <!-- <hr>
+  <h4>NgIf</h4>
+  <div *ngFor="let meter of meterDetailLt" [ngStyle]="{'color':meter.mtr_type==='LT'?'green':'red'}">
+    <p>{{meter.name}}  {{meter.mtr_type}}</p>
+  </div>
+
+  <hr>
+  <h4>NgSwitch</h4>
+  <ul *ngFor="let person of personalDetail" [ngSwitch]="person.name">
+
+  <li *ngSwitchCase="'A'"
+      class="text-success">{{ person.name }} ({{ person.city }})
+  </li>
+  <li *ngSwitchCase="'B'"
+      class="text-primary">{{ person.name }} ({{ person.city }})
+  </li>
+  <li *ngSwitchCase="'C'"
+      class="text-danger">{{ person.name }} ({{ person.city }})
+  </li>
+
+</ul> -->
+
+
+import { formatDate } from '@angular/common';
+import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  title = 'demoAngular';
+  env = environment.title;
+
+  oddNumbers =[1,3,5,7,9]
+  evenNumbers =[2,4,6,8,10]
+
+  odd=false;
+  cond=false;
+
+
+  meterDetailLt = [{"name":"METER1", "mtr_status":true ,"mtr_type":"LT","installedDate":new Date(),"city":"Mumbai",
+                  "state":"Maharashtra", "phoneNo":9632189577, "pincode":400078}]
+
+  meterDetailHt = [{"name":"METER2", "mtr_status":false ,"mtr_type":"HT","installedDate":new Date(),"city":"Mumbai",
+                  "state":"Maharashtra", "phoneNo":9632189577, "pincode":400078}]
+  
+                  
+   userDetail:any=[]
+
+                  getColor(){
+                    if(this.env==='DEV')
+                    return 'blue'
+                    else
+                    return 'yellow';
+                  }
+
+  personalDetail = [
+    {"name":"A", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532},
+    {"name":"B", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532},
+    {"name":"C", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532}
+
+  ]
+
+  getDetail(){
+    alert("INSIDE");
+  }
+
+onclick(){
+  this.meterDetailLt.push({"name":"METER1", "mtr_status":true ,"mtr_type":"LT","installedDate":new Date(),"city":"Mumbai",
+  "state":"Maharashtra", "phoneNo":9632189577, "pincode":400078})
+}
+
+
+onSubmitParentFromChild(data:any)
+  {
+    console.log(data);
+    this.userDetail.push(data);
+  }
+
+}
+
+

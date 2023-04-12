@@ -1,38 +1,52 @@
-<section class="sample-app-content">
-  <h1>Template-driven Form Example (with bi-directional data binding):</h1>
-
-      <p>
-          <label>First Name:</label>
-          <input type="text"
-              [(ngModel)]="user.name" required>
-      </p>
-      <p>
-          <label>Mtr Type:</label>
-          <input type="test"
-              [(ngModel)]="user.mtr_type" required>
-      </p>
-      <p>
-          <label>city:</label>
-          <input type="test"
-              [(ngModel)]="user.city" required>
-      </p>
-      <p>
-          <label>State:</label>
-          <input type="test"
-              [(ngModel)]="user.state" required>
-      </p>
-      <p>
-          <label>phoneNo:</label>
-          <input type="test"
-              [(ngModel)]="user.phoneNo" required>
-      </p>
-      <p>
-          <label>Pincode:</label>
-          <input type="test"
-              [(ngModel)]="user.pincode" required>
-      </p>
-      <p>
-          <button type="submit" (click)="onSubmit()">Submit</button>
-      </p>
-
-</section>
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Name</th>
+        <th>Installed Date</th>
+        <th>Meter Status</th>
+        <th>Meter Type</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Phone No.</th>
+        <th>Pincode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userDetailAll of userDetail">
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="ms-3">
+              <p class="fw-bold mb-1">{{userDetailAll.name | uppercase}}</p>
+            </div>
+          </div>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">{{userDetailAll.installedDate | date:'dd-MM-yyyy' }}</p> 
+          </td>
+        <td> 
+          <p class="fw-normal mb-1" [ngStyle]="userDetailAll.mtr_status ==='active'?{color:'blue'}:{color:'red'}">{{userDetailAll.mtr_status | uppercase}}</p>
+        </td>
+       
+        <td *ngIf="userDetailAll.mtr_type==='LT' || userDetailAll.mtr_type==='lt'; else elseBlock">
+          <span class="badge badge-success" >{{userDetailAll.mtr_type |uppercase}}</span>
+        </td>
+        <ng-template #elseBlock><td><span class="badge bg-danger" >{{userDetailAll.mtr_type | uppercase}}</span></td></ng-template>
+  
+        
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.city }}</p>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.state }}</p>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.phoneNo }}</p>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.pincode }}</p>
+        </td>
+      </tr>
+        </tbody>
+  </table>
+  
+  
