@@ -11,6 +11,7 @@ import { AttributeHighlightDirective } from './shared/attribute-highlight.direct
 import { MeterComponent } from './component/meter/meter.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormDemoComponent } from './component/form-demo/form-demo.component';
+import { MeterPageComponent } from './component/meter-page/meter-page.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormDemoComponent } from './component/form-demo/form-demo.component';
     TableComponent,
     AttributeHighlightDirective,
     MeterComponent,
-    FormDemoComponent
+    FormDemoComponent,
+    MeterPageComponent
   ],
   imports: [
     BrowserModule,
