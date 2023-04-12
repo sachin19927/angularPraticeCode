@@ -85,6 +85,12 @@ Environment  - Header Name should changes
 
 Task 3
 
+Create new branch
+
 Create Header Nav bar and footer adde in App component
 
 Exsiting component navigate using nav bar routers
+
+use routerLink, routerActive - understand the concept
+
+404 page - default page - if page is not configured

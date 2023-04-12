@@ -19,4 +19,10 @@ export class AppComponent {
   }
 
 
+  personalDetail = [
+    {"name":"A", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532},
+    {"name":"B", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532},
+    {"name":"C", "DOB": new Date(), "city":"Mumbai", "state":"MH", "contact1":9632189577,"contact2":9632189532}
+
+  ]
 }

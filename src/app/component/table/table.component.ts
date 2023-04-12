@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TableComponent implements OnInit {
 
 
-  @Input('biodata') personalDetail!:{name:string,DOB:Date,city:string,state:string,contact1:number,contact2:number};	
+  @Input('biodata') personalDetail!:[{name:string,DOB:Date,city:string,state:string,contact1:number,contact2:number}];	
 
   constructor() { }
 

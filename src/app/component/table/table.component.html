@@ -1,4 +1,7 @@
 <!--table-hover-->
+<hr>
+<br>
+<h4>User Detail</h4>
 <table class="table">
     <thead>
       <tr>
@@ -11,7 +14,7 @@
       </tr>
     </thead>
     <tbody appAttributeHighlight>
-      <tr>
+      <tr *ngFor="let personalDetail of personalDetail">
         <th scope="row">1</th>
         <td>{{personalDetail.name}}</td>
         <td>{{personalDetail.DOB | date:"dd-MM-yyyy"}}</td>
