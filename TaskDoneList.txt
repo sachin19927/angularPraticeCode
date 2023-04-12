@@ -1,0 +1,16 @@
+Angular Flow
+Understanding of each page
+Basic GIT commands learning
+Working on bootstrap classes
+
+
+1. Property Binding
+2. Event Binding
+3. Two way binding (ngModel)
+4. Componenet creation
+5. Directives (SAC) -
+	*ngFor,*ngIf,*ngSwitch
+	@HostBinding, @HostListner
+6. Lifecycle
+7. Input,Output decorator
+8. Forms

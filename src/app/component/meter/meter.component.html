@@ -1,0 +1,52 @@
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Name</th>
+        <th>Installed Date</th>
+        <th>Meter Status</th>
+        <th>Meter Type</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Phone No.</th>
+        <th>Pincode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userDetailAll of userDetail">
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="ms-3">
+              <p class="fw-bold mb-1">{{userDetailAll.name | uppercase}}</p>
+            </div>
+          </div>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">{{userDetailAll.installedDate | date:'dd-MM-yyyy' }}</p> 
+          </td>
+        <td> 
+          <p class="fw-normal mb-1" [ngStyle]="userDetailAll.mtr_status ==='active'?{color:'blue'}:{color:'red'}">{{userDetailAll.mtr_status | uppercase}}</p>
+        </td>
+       
+        <td *ngIf="userDetailAll.mtr_type==='LT' || userDetailAll.mtr_type==='lt'; else elseBlock">
+          <span class="badge badge-success" >{{userDetailAll.mtr_type |uppercase}}</span>
+        </td>
+        <ng-template #elseBlock><td><span class="badge bg-danger" >{{userDetailAll.mtr_type | uppercase}}</span></td></ng-template>
+  
+        
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.city }}</p>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.state }}</p>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.phoneNo }}</p>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{userDetailAll.pincode }}</p>
+        </td>
+      </tr>
+        </tbody>
+  </table>
+  
+  

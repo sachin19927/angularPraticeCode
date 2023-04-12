@@ -9,38 +9,88 @@ Make it generic reusable component
 
 proprty Binding ex ngStyle(inbuilt) custom property binding @Input()
 
-directive NgFor 
+directive NgFor
 
-direcrtive can be used with HTML and Custom selectors 
+direcrtive can be used with HTML and Custom selectors
 
 
 Declaration
  @Input('dataList') meter!:{name:string,city:string,type:string};
- 
- 
-Intialization 
+
+
+Intialization
 meterDetailLt=[{"name":"Bindisha","city":"RAJ" , "type":"LT"},
-                {"name":"China","city":"RAJ" , "type":"LT"}] 
-	
+                {"name":"China","city":"RAJ" , "type":"LT"}]
+
 
 
 Task 1
 
 Use Boot strap	Table 	/Anything
 
-{name:string,mtr_status:boolean,mtr_type:string,installedDate:date,city:string,state:string,phoneNo:number,pincode:number};	
+{name:string,mtr_status:boolean,mtr_type:string,installedDate:date,city:string,state:string,phoneNo:number,pincode:number};
 
 mtr_status
 Active/Inactive Green/Red
 
 mtr_type
-Badge 
+Badge
 
 Name In capital use Pipes
 
 Date format i want in DD-MM-YYYY  pipes date pipes
 
-			
+
 Task 2
 
-Applying Filter pipe to the above UI			
+Applying Filter pipe to the above UI
+
+
+directive
+
+SAC
+Structure
+Attribute   --- Task is to creat custom driectve onclick ope drop down
+component
+
+
+Envirment config fr test and cert
+
+
+Task 2
+
+2 components to create -
+Create Table Componet
+
+TS [] - no hardcode , dummy array , put in table
+
+Bootstrap Table
+
+Custom on mouseover chagnes on Tbody Attribute directive
+Click then drop down should open on up - using directive
+
+ngIf revers Structure directive - write own  structure directive
+
+ngswitch - check
+
+
+Environment  - Header Name should changes
+
+
+
+
+
+
+
+
+Task 3
+
+Create new branch
+
+Create Header Nav bar and footer adde in App component
+
+Exsiting component navigate using nav bar routers
+
+use routerLink, routerActive - understand the concept
+
+404 page - default page - if page is not configured
